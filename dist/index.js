@@ -4,8 +4,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
+const server_config_1 = __importDefault(require("./configs/server.config"));
 const app = (0, express_1.default)();
-app.listen(3000, () => {
-    console.log("server started");
-    console.log("server is running");
+app.listen(server_config_1.default.PORT, () => {
+    console.log(`server is running at ${server_config_1.default.PORT}`);
 });

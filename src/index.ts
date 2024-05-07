@@ -1,6 +1,6 @@
 import express from "express";
+import serverConfig from "./configs/server.config";
 const app = express();
-app.listen(3000, () => {
-  console.log("server started");
-  console.log("server is running");
+app.listen(serverConfig.PORT, () => {
+  console.log(`server is running at ${serverConfig.PORT}`);
 });
